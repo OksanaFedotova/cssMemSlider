@@ -2,7 +2,7 @@ body {
    overflow-x: hidden;
 }
 .wrapper {
-   height: 90vh;
+   height: 100vh;
    margin: 100px auto 0;
    width: 90vw;
    display: flex;
@@ -45,22 +45,22 @@ p {
 }
 .meme_1 {
    background-image: url('assets/meme_1.jpg');
-   background-size: 80%;
+   background-size: auto;
  
 }
 .meme_2 {
    background-image: url('assets/meme_2.jpg');
-   background-size: 90%;
+   background-size: auto;
 
 }
 .meme_3 {
    background-image: url('assets/meme_3.jpg');
-   background-size: 70%;
+   background-size: auto;
 
 }
 .meme_4 {
    background-image: url('assets/meme_4.jpg');
-   background-size: 60%;
+   background-size: auto;
 }
 
  .wrapper .controls {
