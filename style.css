@@ -2,12 +2,16 @@ body {
    overflow-x: hidden;
 }
 .wrapper {
-	height: 90vh;
-	margin: 100px auto 0;
-	width: 90vw;
+   height: 90vh;
+   margin: 100px auto 0;
+   width: 90vw;
    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-color: black;
+   border-radius: 2rem;
+   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+   
 }
 input {
    display: none;
@@ -17,11 +21,12 @@ input {
 	height: 90%;
 	overflow: hidden;
 	width: inherit;
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+   border-radius: 2rem;
 }
 .slides {
    display: flex;
    height: 100%;
+   width: 100%;
    margin-top: 0.1rem;
    flex-direction: column;
    align-items: flex-start;
@@ -36,7 +41,7 @@ input {
 }
 p {
    color: white;
-   margin: 0.625rem;
+   margin: 2rem;
 }
 .meme_1 {
    background-image: url('assets/meme_1.jpg');
@@ -56,48 +61,60 @@ p {
 }
 
  .wrapper .controls {
-	margin-top: -3.25rem;
-   margin-left: 0.625rem;
-   z-index: 2;
+   margin-right: 2rem;
+   z-index: 3;
+   width: 10rem;
 }  
-
-.wrapper label {
-	cursor: pointer;
-	display: inline-block;
-	height: 8px;
-	margin: 25px 12px 0 16px;
-	width: 8px;
-	border-radius: 50%;
-   border: 2px solid #ddd;
-	content: " ";
-	display: block;
-	height: 12px;
-	width: 12px;
-	border-radius: 50%;
-}
-
-
+.container-controls {
+   height: 7rem;
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   }
 .wrapper label {
 	cursor: pointer;
 	display: inline-block;
 	height: 0.625rem;
-	margin: 25px 12px 0 16px;
+	margin: 1.5rem 0.5rem;
 	width: 0.625rem;
+   border-radius: 50%;
+   border: 2px solid #ddd;
+   background: #ddd;
 	transition: background ease-in-out .5s;
 }
+.wrapper label:hover {
+   background: #ddd;
+   opacity: 0.5;
+}
 
-.wrapper label:hover, 
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4) {
-	background: #ddd;
+#slide1:checked ~ .container-controls .controls label:nth-of-type(1),
+#slide2:checked ~ .container-controls .controls label:nth-of-type(2),
+#slide3:checked ~ .container-controls .controls label:nth-of-type(3),
+#slide4:checked ~ .container-controls .controls label:nth-of-type(4) {
+	background: none;
 }
 .slides {
 	opacity: 0;
-	width: inherit;
 	z-index: 0;
+   width: 0%;
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.text {
+   display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+}
+.slider-text {
+   opacity: 0;
+	z-index: 0;
+   width: 0%;
+   margin: 1rem;
+   transform: translate(100%, 0%);
+	transition: transform ease-in-out .5s;
+}
+.slide1 {
+   transform: translate(0%, 100%);
 }
 #slide1:checked ~ .slider > .slide1 {
    transform: translate(0%, 0%);
@@ -121,4 +138,26 @@ p {
 #slide4:checked ~ .slider > .slide4{
 	opacity: 1;
 	z-index: 1;
+   width: 100%;
 }
+#slide1:checked ~ .container-controls .text .slide1-text {
+   transform: translate(0%, 0%);
+}
+#slide2:checked ~ .container-controls .text .slide2-text {
+  transform: translate(-5%, 0%); 
+}
+#slide3:checked ~ .container-controls .text .slide3-text {
+   transform: translate(-10%, 0%); 
+ }
+ #slide4:checked ~ .container-controls .text .slide4-text {
+   transform: translate(-15%, 0%); 
+ }
+ #slide1:checked ~ .container-controls .text .slide1-text,
+ #slide2:checked ~ .container-controls .text .slide2-text,
+ #slide3:checked ~ .container-controls .text .slide3-text,
+ #slide4:checked ~ .container-controls .text .slide4-text{
+   opacity: 1;
+	z-index: 1;
+   width: 40rem;
+   height: 7rem;
+ }
