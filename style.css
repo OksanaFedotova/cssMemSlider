@@ -45,7 +45,7 @@ p {
 }
 .meme_1 {
    background-image: url('assets/meme_1.jpg');
-   background-size: 90%;
+   background-size: 80%;
  
 }
 .meme_2 {
@@ -55,12 +55,12 @@ p {
 }
 .meme_3 {
    background-image: url('assets/meme_3.jpg');
-   background-size: 90%;
+   background-size: 70%;
 
 }
 .meme_4 {
    background-image: url('assets/meme_4.jpg');
-   background-size: 90%;
+   background-size: 60%;
 }
 
  .wrapper .controls {
@@ -172,6 +172,25 @@ p {
     } 
    .slider {
       height: 70%;
+   }
+   .meme_1 {
+      background-image: url('assets/meme_1.jpg');
+      background-size: 80%;
+    
+   }
+   .meme_2 {
+      background-image: url('assets/meme_2.jpg');
+      background-size: 90%;
+   
+   }
+   .meme_3 {
+      background-image: url('assets/meme_3.jpg');
+      background-size: 80%;
+   
+   }
+   .meme_4 {
+      background-image: url('assets/meme_4.jpg');
+      background-size: 80%;
    }
    .container-controls {
       margin-top: 7rem;
