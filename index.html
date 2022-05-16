@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS slider</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="wrapper">
+      <input type="radio" name="point" id="slide1" checked>
+      <input type="radio" name="point" id="slide2">
+      <input type="radio" name="point" id="slide3">
+      <input type="radio" name="point" id="slide4">
+      <div class="slider">
+         <div class="slides slide1">
+            <div class="meme meme_1"></div>
+         </div>
+         <div class="slides slide2">
+            <div class="meme meme_2"></div>
+         </div>
+         <div class="slides slide3">
+            <div class="meme meme_3"></div>
+         </div>
+         <div class="slides slide4">
+            <div class="meme meme_4"></div>
+         </div>
+      </div>	
+      <div class="container-controls">
+      <div class="text">
+      <p class="slider-text slide1-text">Тот момент, когда нельзя двигаться, потому что он обидется и уйдет</p>
+      <p class="slider-text slide2-text">Каждый день надежда лечь пораньше умирает где-то в интернете</p>
+      <p class="slider-text slide3-text">Вон кресло свободное, там и спи</p>
+      <p class="slider-text slide4-text"> - Конфеток шоколадных взвесьте, пожалуйста. - Сколько? - Грамм 100. - 450 получилось. - Ну ладно, давайте.</p>
+   </div>
+      <div class="controls">
+         <label for="slide1"><span class="pseudobutton pseudobutton_slide1"></span></label>
+         <label for="slide2"><span class="pseudobutton pseudobutton_slide2"></span></label>
+         <label for="slide3"><span class="pseudobutton pseudobutton_slide3"></span></label>
+         <label for="slide4"><span class="pseudobutton pseudobutton_slide4"></span></label>
+      </div>
+   </div>
+</body>
+</html>
