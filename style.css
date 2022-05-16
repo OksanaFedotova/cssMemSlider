@@ -2,7 +2,7 @@ body {
    overflow-x: hidden;
 }
 .wrapper {
-   height: 100vh;
+   height: 95vh;
    margin: 100px auto 0;
    width: 90vw;
    display: flex;
